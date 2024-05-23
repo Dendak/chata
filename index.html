@@ -10,6 +10,12 @@
     <meta name="description" content="Pronájem útulné chaty v krásném prostředí. Ideální místo pro relaxaci a únik od každodenního shonu.">
     <meta name="keywords" content="pronájem chaty, ubytování, dovolená, relaxace">
     <meta name="author" content="Vaše Jméno">
+    <style>
+        .carousel-inner img {
+            height: 900px; /* Nastavení pevné výšky pro obrázky */
+            object-fit: cover; /* Zajištění správného vyplnění prostoru */
+        }
+    </style>
 </head>
 <body>
 
@@ -48,175 +54,108 @@
         <h2>Galerie</h2>
 
         <h3>Interiér</h3>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="images/kuchyn.jpg" class="card-img-top" alt="Kuchyň">
-                    <div class="card-body">
-                        <p class="card-text">Nádherný výhled z naší kuchyně.</p>
-                    </div>
+        <div id="interiorCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+
+                <div class="carousel-item">
+                    <img src="images/loznice.jpeg" class="d-block w-100" alt="Ložnice">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/obyvak.jpg" class="d-block w-100" alt="Obývák">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/obyvak 2.jpeg" class="d-block w-100" alt="Obývák 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/obyvak 3.jpg" class="d-block w-100" alt="Obývák 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/jidelna.jpeg" class="d-block w-100" alt="Jídelna">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/kuchyn.jpg" class="d-block w-100" alt="Kuchyňský kout">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/dolni-koupelna-1.jpg" class="d-block w-100" alt="Dolní koupelna">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/horni-koupelna-1.jpg" class="d-block w-100" alt="Horní koupelna 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/horni koupelna 2.jpeg" class="d-block w-100" alt="Horní koupelna 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/horni koupelna 3.jpeg" class="d-block w-100" alt="Horní koupelna 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/horni koupelna 4.jpeg" class="d-block w-100" alt="Horní koupelna 4">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/schody.jpeg" class="d-block w-100" alt="Schody">
+                </div>
+                <div class="carousel-item active">
+                    <img src="images/kuchyn.jpg" class="d-block w-100" alt="Kuchyň">
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="images/loznice.jpeg" class="card-img-top" alt="Ložnice">
-                    <div class="card-body">
-                        <p class="card-text">Komfortní a moderní ložnice.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="images/obyvak.jpg" class="card-img-top" alt="Obývák">
-                    <div class="card-body">
-                        <p class="card-text">Útulné prostředí obýváku pro relaxaci.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="images/obyvak 2.jpeg" class="card-img-top" alt="Obývák 2">
-                    <div class="card-body">
-                        <p class="card-text">Další pohled na útulný obývák.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="images/obyvak 3.jpg" class="card-img-top" alt="Obývák 3">
-                    <div class="card-body">
-                        <p class="card-text">Třetí pohled na obývák.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="images/jidelna.jpeg" class="card-img-top" alt="Jídelna">
-                    <div class="card-body">
-                        <p class="card-text">Prostorná jídelna.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="images/kuchyn.jpg" class="card-img-top" alt="Kuchyňský kout">
-                    <div class="card-body">
-                        <p class="card-text">Plně vybavený kuchyňský kout.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="images/dolni-koupelna-1.jpg" class="card-img-top" alt="Dolní koupelna">
-                    <div class="card-body">
-                        <p class="card-text">Dolní koupelna.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="images/horni-koupelna-1.jpg" class="card-img-top" alt="Horní koupelna 1">
-                    <div class="card-body">
-                        <p class="card-text">Horní koupelna 1.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="images/horni-koupelna 2.jpeg" class="card-img-top" alt="Horní koupelna 2">
-                    <div class="card-body">
-                        <p class="card-text">Horní koupelna 2.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="images/horni koupelna 3.jpeg" class="card-img-top" alt="Horní koupelna 3">
-                    <div class="card-body">
-                        <p class="card-text">Horní koupelna 3.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="images/horni koupelna 4.jpeg" class="card-img-top" alt="Horní koupelna 4">
-                    <div class="card-body">
-                        <p class="card-text">Horní koupelna 4.</p>
-                    </div>
-                </div>
-            </div>
+            <a class="carousel-control-prev" href="#interiorCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#interiorCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+
         </div>
 
         <h3>Exteriér</h3>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="images/exterier-leto.jpg" class="card-img-top" alt="Exteriér léto">
-                    <div class="card-body">
-                        <p class="card-text">Exteriér chaty v létě.</p>
-                    </div>
+        <div id="exteriorCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/exterier-leto.jpg" class="d-block w-100" alt="Exteriér léto">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/exterier zima.jpeg" class="d-block w-100" alt="Exteriér zima">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/terasa.jpeg" class="d-block w-100" alt="Terasa">
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="images/exterier zima.jpeg" class="card-img-top" alt="Exteriér zima">
-                    <div class="card-body">
-                        <p class="card-text">Exteriér chaty v zimě.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="images/terasa.jpeg" class="card-img-top" alt="Terasa">
-                    <div class="card-body">
-                        <p class="card-text">Krásná terasa s výhledem.</p>
-                    </div>
-                </div>
-            </div>
+            <a class="carousel-control-prev" href="#exteriorCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#exteriorCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
 
         <h3>Okolí</h3>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="images/vchod.jpg" class="card-img-top" alt="Vchod">
-                    <div class="card-body">
-                        <p class="card-text">Hlavní vchod do chaty.</p>
-                    </div>
+        <div id="surroundingsCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/vchod.jpg" class="d-block w-100" alt="Vchod">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="images/sjezdovka nedaleko.jpeg" class="d-block w-100" alt="Sjezdovka nedaleko">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/zimni priroda.jpeg" class="d-block w-100" alt="Zimní příroda">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/ostatni 1.jpeg" class="d-block w-100" alt="Ostatní">
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="images/schody.jpeg" class="card-img-top" alt="Schody">
-                    <div class="card-body">
-                        <p class="card-text">Schody vedoucí do patra.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="images/sjezdovka nedaleko.jpeg" class="card-img-top" alt="Sjezdovka nedaleko">
-                    <div class="card-body">
-                        <p class="card-text">Sjezdovka nedaleko chaty.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="images/zimni priroda.jpeg" class="card-img-top" alt="Zimní příroda">
-                    <div class="card-body">
-                        <p class="card-text">Krásná zimní příroda.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="images/ostatni 1.jpeg" class="card-img-top" alt="Ostatní">
-                    <div class="card-body">
-                        <p class="card-text">Ostatní pohledy na okolí.</p>
-                    </div>
-                </div>
-            </div>
+            <a class="carousel-control-prev" href="#surroundingsCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#surroundingsCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
     </div>
 </section>
