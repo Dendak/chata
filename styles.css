@@ -1,6 +1,6 @@
-
 body {
     padding-top: 56px;
+    font-family: 'Roboto', sans-serif;
 }
 .jumbotron {
     background: url('images/kuchyn.jpg') center center;
@@ -12,4 +12,10 @@ body {
 }
 .pricing .card {
     margin-bottom: 1rem;
+}
+.card-img-top {
+    transition: transform 0.3s;
+}
+.card-img-top:hover {
+    transform: scale(1.05);
 }
