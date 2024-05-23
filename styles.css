@@ -19,3 +19,9 @@ body {
 .card-img-top:hover {
     transform: scale(1.05);
 }
+
+.carousel-inner img {
+    width: 100%;
+    height: 500px; /* Nastavení pevné výšky pro obrázky */
+    object-fit: contain; /* Zajištění správného zobrazení obrázků */
+}
