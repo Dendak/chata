@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Chata k Pronájmu</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">Chata k Pronájmu</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="#about">O nás</a></li>
+            <li class="nav-item"><a class="nav-link" href="#gallery">Galerie</a></li>
+            <li class="nav-item"><a class="nav-link" href="#pricing">Ceny</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Kontakt</a></li>
+        </ul>
+    </div>
+</nav>
+
+<header class="jumbotron jumbotron-fluid text-center">
+    <div class="container">
+        <h1 class="display-4">Vítejte v naší chatě</h1>
+        <p class="lead">Ideální místo pro relaxaci a únik od každodenního shonu.</p>
+    </div>
+</header>
+
+<section id="about" class="py-5">
+    <div class="container">
+        <h2>O nás</h2>
+        <p>Naše útulná chata nabízí komfortní ubytování s moderním vybavením a krásným výhledem na okolní přírodu. Je to perfektní místo pro rodiny, páry i jednotlivce, kteří hledají klid a pohodu.</p>
+    </div>
+</section>
+
+<section id="gallery" class="py-5 bg-light">
+    <div class="container">
+        <h2>Galerie</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/kuchyn.jpg" class="card-img-top" alt="Kuchyň">
+                    <div class="card-body">
+                        <p class="card-text">Nádherný výhled z naší kuchyně.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/loznice.jpg" class="card-img-top" alt="Ložnice">
+                    <div class="card-body">
+                        <p class="card-text">Komfortní a moderní ložnice.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/obyvak.jpg" class="card-img-top" alt="Obývák">
+                    <div class="card-body">
+                        <p class="card-text">Útulné prostředí obýváku pro relaxaci.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="pricing" class="py-5">
+    <div class="container">
+        <h2>Ceny</h2>
+        <div class="row pricing">
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-header">
+                        Standardní cena
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">1 200 Kč</h3>
+                        <p class="card-text">za noc</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-header">
+                        Víkendová cena
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">1 500 Kč</h3>
+                        <p class="card-text">za noc</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-header">
+                        Týdenní pobyt
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">7 000 Kč</h3>
+                        <p class="card-text">za týden</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="py-5 bg-light">
+    <div class="container">
+        <h2>Kontakt</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Jméno</label>
+                <input type="text" class="form-control" id="name" placeholder="Vaše jméno">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Váš email">
+            </div>
+            <div class="form-group">
+                <label for="message">Zpráva</label>
+                <textarea class="form-control" id="message" rows="3" placeholder="Vaše zpráva"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Odeslat</button>
+        </form>
+    </div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

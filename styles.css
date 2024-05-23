@@ -1,0 +1,15 @@
+
+body {
+    padding-top: 56px;
+}
+.jumbotron {
+    background: url('images/kuchyn.jpg') center center;
+    background-size: cover;
+    color: white;
+}
+.jumbotron h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.pricing .card {
+    margin-bottom: 1rem;
+}
