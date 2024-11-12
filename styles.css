@@ -1,27 +1,249 @@
+/* Základní nastavení těla stránky */
 body {
     padding-top: 56px;
     font-family: 'Roboto', sans-serif;
 }
+
+/* Nastavení Jumbotronu */
 .jumbotron {
-    background: url('images/exterier-leto.jpg') center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/exterier-leto.jpg') center center;
     background-size: cover;
+    height: 60vh;
     color: white;
-}
-.jumbotron h1 {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-.pricing .card {
-    margin-bottom: 1rem;
-}
-.card-img-top {
-    transition: transform 0.3s;
-}
-.card-img-top:hover {
-    transform: scale(1.05);
+    padding: 5% 0;
+    margin-bottom: 0;
 }
 
+.jumbotron h1 {
+    font-size: 3rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.jumbotron .lead {
+    font-size: 1.5rem;
+}
+
+/* Stylizace ceníku a jeho interakce */
+.pricing .card {
+    margin-bottom: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.pricing .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Nastavení pro obrázky v carouselu */
 .carousel-inner img {
     width: 100%;
-    height: 500px; /* Nastavení pevné výšky pro obrázky */
-    object-fit: contain; /* Zajištění správného zobrazení obrázků */
+    height: 50vh;
+    object-fit: cover;
 }
+
+/* Navigace */
+.navbar-nav .nav-link {
+    transition: color 0.3s;
+}
+.navbar-nav .nav-link:hover {
+    color: #ffc107;
+}
+
+/* Tlačítka a jejich efekty */
+button {
+    transition: transform 0.2s;
+}
+button:active {
+    transform: scale(0.98);
+}
+
+/* Stylizace šipek v carouselu */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: #ffc107;
+    transform: scale(1.1);
+}
+
+/* Stylizace nadpisů */
+h2 {
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 5px;
+    background-color: #ffc107;
+    border-radius: 2px;
+}
+
+#gallery h3 {
+    font-size: 1.5rem;
+    color: #555;
+    font-weight: 700;
+    margin: 1.5rem 0 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding-left: 10px;
+    border-left: 4px solid #ffc107;
+}
+
+h2, h3 {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Media query pro větší obrazovky */
+@media (min-width: 992px) {
+    body {
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1.2rem;
+    }
+
+    .pricing .card {
+        font-size: 1.2rem;
+    }
+
+    .carousel-inner img {
+        height: 60vh;
+    }
+
+    /* Zvýraznění textu v jumbotron */
+    .jumbotron .display-4 {
+        font-size: 3.5rem;
+        color: #ffffff;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        font-weight: bold;
+    }
+
+    .jumbotron .lead {
+        font-size: 1.75rem;
+    }
+}
+
+/* Styl pro zarovnání a rozložení na větších obrazovkách */
+@media (min-width: 768px) {
+    .container .row {
+        display: flex;
+        align-items: center;
+    }
+}
+
+/* Mezery mezi sekcemi */
+.section-spacing {
+    margin-top: 50px;
+}
+
+
+/* Upravíme styl pro rozvržení sloupců v sekci exteriéru */
+@media (max-width: 767.98px) {
+    /* Nastavení pořadí sloupců pro mobilní zobrazení */
+    .col-md-6.order-md-1 {
+        order: 2; /* Zobrazí karusel pod textem na mobilu */
+    }
+    .col-md-6.order-md-2 {
+        order: 1; /* Zobrazí text nad karuselem na mobilu */
+    }
+}
+
+
+
+/* Style the section so the content is aligned side by side */
+#about-interior .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#about-interior .col-md-6 {
+    padding: 15px;
+}
+
+/* Ensure carousel images fit within the space */
+.carousel-inner img {
+    width: 100%;
+    height: 400px;  /* Adjust the height of the images */
+    object-fit: cover;
+}
+
+/* Styling for the "O nás" section */
+#about {
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+#about h2 {
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#about h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 5px;
+    background-color: #ffc107;
+    border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+    /* Stacked layout for smaller screens */
+    #about-interior .row {
+        flex-direction: column;
+    }
+    
+    /* Adjust carousel image height on smaller screens */
+    .carousel-inner img {
+        height: 300px;
+    }
+}
+
+#gallery-for-interier {
+    font-size: 1.5rem;
+    color: #555;
+    font-weight: 700;
+    margin: 1.5rem 0 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding-left: 10px;
+    border-left: 4px solid #ffc107;
+}
+
+
