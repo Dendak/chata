@@ -70,7 +70,11 @@ img { max-width: 100%; }
     position: relative;
     height: 100vh;
     min-height: 580px;
-    background: url('images/exterier-leto.jpg') center center / cover no-repeat;
+    background-color: var(--dark);
+    background-image: url('images/exterier-leto.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
