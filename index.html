@@ -3,462 +3,592 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chata Lipno — Pronájem</title>
+    <title>Chata Lipno — Pronájem Lipno nad Vltavou</title>
     <meta name="description" content="Pronájem útulné chaty v Lipně nad Vltavou. Ideální místo pro rodinnou dovolenou, relaxaci a zimní sporty.">
+    <meta name="keywords" content="pronájem chaty, Lipno, ubytování, dovolená, lyžování, relaxace">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css">
-
+    <!-- Bootstrap 5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- NAV -->
-<nav id="nav">
-    <div class="nav-inner">
-        <a href="#top" class="nav-logo">Chata Lipno</a>
-        <button class="nav-toggle" id="navToggle" aria-label="Menu">
-            <span></span><span></span><span></span>
+<!-- ===== NAVBAR ===== -->
+<nav id="mainNav" class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#home">
+            <i class="fas fa-house-chimney"></i>
+            <span>Chata Lipno</span>
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Otevřít navigaci">
+            <span class="toggler-line"></span>
+            <span class="toggler-line"></span>
+            <span class="toggler-line"></span>
         </button>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#o-nas">O nás</a></li>
-            <li><a href="#galerie">Galerie</a></li>
-            <li><a href="#ceny">Ceny</a></li>
-            <li><a href="#kontakt">Kontakt</a></li>
-            <li><a href="#mapa">Mapa</a></li>
-        </ul>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center gap-1">
+                <li class="nav-item"><a class="nav-link" href="#about">O nás</a></li>
+                <li class="nav-item"><a class="nav-link" href="#gallery">Galerie</a></li>
+                <li class="nav-item"><a class="nav-link" href="#pricing">Ceny</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Kontakt</a></li>
+                <li class="nav-item ms-lg-3">
+                    <a class="nav-cta" href="#contact">Rezervovat</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>
 
-<!-- HERO -->
-<section id="top" class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-content">
-        <span class="hero-tag">Lipno nad Vltavou</span>
-        <h1>Váš domov<br><em>uprostřed přírody</em></h1>
-        <p>Útulná chata pro celou rodinu — léto i zima</p>
-        <div class="hero-cta">
-            <a href="#galerie" class="btn-primary">Prohlédnout</a>
-            <a href="#kontakt" class="btn-ghost">Rezervovat</a>
-        </div>
-    </div>
-    <div class="hero-scroll" id="heroScroll">
-        <span>Scroll</span>
-        <div class="hero-scroll-line"></div>
-    </div>
-</section>
-
-<!-- HIGHLIGHTS -->
-<div class="highlights">
-    <div class="highlight-item">
-        <i class="fas fa-bed"></i>
-        <span>4 ložnice</span>
-    </div>
-    <div class="highlight-item">
-        <i class="fas fa-bath"></i>
-        <span>2 koupelny</span>
-    </div>
-    <div class="highlight-item">
-        <i class="fas fa-mountain-snow"></i>
-        <span>Sjezdovka 5 min</span>
-    </div>
-    <div class="highlight-item">
-        <i class="fas fa-fire-flame-curved"></i>
-        <span>Krb</span>
-    </div>
-    <div class="highlight-item">
-        <i class="fas fa-wifi"></i>
-        <span>Wi-Fi</span>
-    </div>
-    <div class="highlight-item">
-        <i class="fas fa-car"></i>
-        <span>Parkování</span>
-    </div>
-</div>
-
-<!-- O NÁS -->
-<section id="o-nas" class="section about">
-    <div class="container-split">
-        <div class="about-text reveal">
-            <span class="eyebrow">O nás</span>
-            <h2>Útočiště, kde čas<br><em>plyne pomalu</em></h2>
-            <p>Naše chata v Lipně nad Vltavou nabízí to nejlepší z horského ubytování — komfort moderního vybavení a kouzlo přírody přímo za dveřmi. Perfektní místo pro rodiny, páry i skupiny přátel.</p>
-            <p>V létě pěší túry a cyklotrasy, v zimě lyžování na blízkých sjezdovkách. Každé roční období má své kouzlo.</p>
-            <ul class="feature-grid">
-                <li><i class="fas fa-check"></i> 4 ložnice, až 10 osob</li>
-                <li><i class="fas fa-check"></i> 2 moderní koupelny</li>
-                <li><i class="fas fa-check"></i> Plně vybavená kuchyň</li>
-                <li><i class="fas fa-check"></i> Obývací pokoj s krbem</li>
-                <li><i class="fas fa-check"></i> Prostorná terasa</li>
-                <li><i class="fas fa-check"></i> Rychlé Wi-Fi</li>
-            </ul>
-        </div>
-        <div class="about-images reveal">
-            <div class="about-img-main">
-                <img src="images/exterier-leto.jpg" alt="Chata v létě">
+<!-- ===== HERO ===== -->
+<section id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-container">
+        <div class="hero-text">
+            <div class="hero-tag reveal">
+                <span class="hero-dot"></span> Lipno nad Vltavou, CZ
             </div>
-            <div class="about-img-grid">
-                <img src="images/terasa.jpeg" alt="Terasa">
-                <img src="images/exterier zima.jpeg" alt="Chata v zimě">
+            <h1 class="hero-title reveal reveal-d1">
+                Váš domov<br><em>uprostřed přírody</em>
+            </h1>
+            <p class="hero-subtitle reveal reveal-d2">
+                Útulná chata s krbem, terasou a přímým napojením<br class="d-none d-md-block">
+                na přírodu Lipenska — pro celou rodinu.
+            </p>
+            <div class="hero-actions reveal reveal-d3">
+                <a href="#about" class="btn-primary-custom">
+                    Prohlédnout chatu <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#pricing" class="btn-ghost-custom">Ceník</a>
             </div>
         </div>
+        <div class="hero-pills reveal reveal-d3">
+            <div class="hero-pill"><i class="fas fa-bed"></i><span>4 ložnice</span></div>
+            <div class="hero-pill"><i class="fas fa-fire"></i><span>Krb</span></div>
+            <div class="hero-pill"><i class="fas fa-snowflake"></i><span>5 min sjezdovka</span></div>
+            <div class="hero-pill"><i class="fas fa-wifi"></i><span>Wi-Fi</span></div>
+        </div>
     </div>
+    <a href="#stats" class="hero-scroll" aria-label="Scrollovat dolů">
+        <i class="fas fa-chevron-down"></i>
+    </a>
 </section>
 
-<!-- GALERIE -->
-<section id="galerie" class="section gallery-section">
+<!-- ===== STATS ===== -->
+<section id="stats" class="stats-section">
     <div class="container">
-        <div class="section-head reveal">
-            <span class="eyebrow">Fotogalerie</span>
-            <h2>Prohlédněte si<br><em>každý koutek</em></h2>
+        <div class="stats-grid">
+            <div class="stat-item reveal">
+                <span class="stat-number">4</span>
+                <span class="stat-label">Ložnice</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item reveal reveal-d1">
+                <span class="stat-number">2</span>
+                <span class="stat-label">Koupelny</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item reveal reveal-d2">
+                <span class="stat-number">8</span>
+                <span class="stat-label">Hostů max.</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item reveal reveal-d3">
+                <span class="stat-number">5<small>min</small></span>
+                <span class="stat-label">Na sjezdovku</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== O NÁS ===== -->
+<section id="about" class="section-pad">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <!-- Text -->
+            <div class="col-lg-5 reveal">
+                <div class="eyebrow">O chatě</div>
+                <h2 class="sec-heading">Vaše útočiště<br>v srdci přírody</h2>
+                <p class="sec-body">
+                    Naše útulná chata nabízí komfortní ubytování s moderním vybavením a krásným výhledem na okolní přírodu.
+                    Perfektní místo pro rodiny, páry i jednotlivce hledající klid a pohodu.
+                </p>
+                <div class="features-bento">
+                    <div class="feat-card">
+                        <i class="fas fa-bed"></i>
+                        <div><strong>4 ložnice</strong><span>Pohodlný spánek</span></div>
+                    </div>
+                    <div class="feat-card">
+                        <i class="fas fa-bath"></i>
+                        <div><strong>2 koupelny</strong><span>Moderní vybavení</span></div>
+                    </div>
+                    <div class="feat-card">
+                        <i class="fas fa-fire"></i>
+                        <div><strong>Krb</strong><span>Útulné večery</span></div>
+                    </div>
+                    <div class="feat-card">
+                        <i class="fas fa-wifi"></i>
+                        <div><strong>Rychlé Wi-Fi</strong><span>Připojení zdarma</span></div>
+                    </div>
+                    <div class="feat-card">
+                        <i class="fas fa-car"></i>
+                        <div><strong>Parkování</strong><span>U chaty zdarma</span></div>
+                    </div>
+                    <div class="feat-card">
+                        <i class="fas fa-mountain"></i>
+                        <div><strong>Sjezdovka</strong><span>5 minut autem</span></div>
+                    </div>
+                </div>
+                <a href="#contact" class="btn-primary-custom mt-4 d-inline-flex">
+                    Nezávazná rezervace <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <!-- Images -->
+            <div class="col-lg-7 reveal reveal-d2">
+                <div class="about-img-grid">
+                    <div class="about-img-main">
+                        <img src="images/exterier-leto.jpg" alt="Chata Lipno — exteriér" loading="lazy">
+                    </div>
+                    <div class="about-img-side">
+                        <img src="images/obyvak.jpg" alt="Obývací pokoj" loading="lazy">
+                        <img src="images/terasa.jpeg" alt="Terasa" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== GALERIE ===== -->
+<section id="gallery" class="section-pad bg-warm">
+    <div class="container">
+        <div class="sec-header text-center reveal">
+            <div class="eyebrow">Fotogalerie</div>
+            <h2 class="sec-heading">Prohlédněte si naši chatu</h2>
         </div>
 
-        <div class="gallery-filter reveal">
+        <div class="gallery-filter reveal reveal-d1">
             <button class="filter-btn active" data-filter="all">Vše</button>
             <button class="filter-btn" data-filter="interior">Interiér</button>
             <button class="filter-btn" data-filter="exterior">Exteriér</button>
             <button class="filter-btn" data-filter="surroundings">Okolí</button>
         </div>
 
-        <div class="photo-grid reveal">
-            <!-- Exteriér -->
-            <div class="photo-item" data-cat="exterior" onclick="openLb(this)">
-                <img src="images/exterier-leto.jpg" alt="Exteriér léto" loading="lazy">
-                <div class="photo-hover"><i class="fas fa-plus"></i></div>
-            </div>
-            <div class="photo-item photo-tall" data-cat="exterior" onclick="openLb(this)">
-                <img src="images/exterier zima.jpeg" alt="Exteriér zima" loading="lazy">
-                <div class="photo-hover"><i class="fas fa-plus"></i></div>
-            </div>
-            <div class="photo-item" data-cat="exterior" onclick="openLb(this)">
-                <img src="images/terasa.jpeg" alt="Terasa" loading="lazy">
-                <div class="photo-hover"><i class="fas fa-plus"></i></div>
-            </div>
-            <div class="photo-item" data-cat="exterior" onclick="openLb(this)">
-                <img src="images/vchod.jpg" alt="Vchod" loading="lazy">
-                <div class="photo-hover"><i class="fas fa-plus"></i></div>
-            </div>
+        <div class="gallery-grid" id="galleryGrid">
             <!-- Interiér -->
-            <div class="photo-item photo-wide" data-cat="interior" onclick="openLb(this)">
-                <img src="images/obyvak.jpg" alt="Obývák" loading="lazy">
-                <div class="photo-hover"><i class="fas fa-plus"></i></div>
+            <div class="gal-wrap" data-cat="interior">
+                <div class="gal-item" onclick="openLightbox(this)">
+                    <img src="images/kuchyn.jpg" alt="Kuchyň" loading="lazy">
+                    <div class="gal-overlay"><i class="fas fa-plus"></i></div>
+                </div>
             </div>
-            <div class="photo-item" data-cat="interior" onclick="openLb(this)">
-                <img src="images/obyvak 2.jpeg" alt="Obývák 2" loading="lazy">
-                <div class="photo-hover"><i class="fas fa-plus"></i></div>
+            <div class="gal-wrap" data-cat="interior">
+                <div class="gal-item" onclick="openLightbox(this)">
+                    <img src="images/obyvak.jpg" alt="Obývák" loading="lazy">
+                    <div class="gal-overlay"><i class="fas fa-plus"></i></div>
+                </div>
             </div>
-            <div class="photo-item" data-cat="interior" onclick="openLb(this)">
-                <img src="images/obyvak 3.jpg" alt="Obývák 3" loading="lazy">
-                <div class="photo-hover"><i class="fas fa-plus"></i></div>
+            <div class="gal-wrap" data-cat="interior">
+                <div class="gal-item" onclick="openLightbox(this)">
+                    <img src="images/obyvak 2.jpeg" alt="Obývák 2" loading="lazy">
+                    <div class="gal-overlay"><i class="fas fa-plus"></i></div>
+                </div>
             </div>
-            <div class="photo-item" data-cat="interior" onclick="openLb(this)">
-                <img src="images/kuchyn.jpg" alt="Kuchyň" loading="lazy">
-                <div class="photo-hover"><i class="fas fa-plus"></i></div>
+            <div class="gal-wrap" data-cat="interior">
+                <div class="gal-item" onclick="openLightbox(this)">
+                    <img src="images/obyvak 3.jpg" alt="Obývák 3" loading="lazy">
+                    <div class="gal-overlay"><i class="fas fa-plus"></i></div>
+                </div>
             </div>
-            <div class="photo-item" data-cat="interior" onclick="openLb(this)">
-                <img src="images/jidelna.jpeg" alt="Jídelna" loading="lazy">
-                <div class="photo-hover"><i class="fas fa-plus"></i></div>
+            <div class="gal-wrap" data-cat="interior">
+                <div class="gal-item" onclick="openLightbox(this)">
+                    <img src="images/jidelna.jpeg" alt="Jídelna" loading="lazy">
+                    <div class="gal-overlay"><i class="fas fa-plus"></i></div>
+                </div>
             </div>
-            <div class="photo-item photo-tall" data-cat="interior" onclick="openLb(this)">
-                <img src="images/loznice.jpeg" alt="Ložnice" loading="lazy">
-                <div class="photo-hover"><i class="fas fa-plus"></i></div>
+            <div class="gal-wrap" data-cat="interior">
+                <div class="gal-item" onclick="openLightbox(this)">
+                    <img src="images/loznice.jpeg" alt="Ložnice" loading="lazy">
+                    <div class="gal-overlay"><i class="fas fa-plus"></i></div>
+                </div>
             </div>
-            <div class="photo-item" data-cat="interior" onclick="openLb(this)">
-                <img src="images/loznice 1.jpg" alt="Ložnice 1" loading="lazy">
-                <div class="photo-hover"><i class="fas fa-plus"></i></div>
+            <div class="gal-wrap" data-cat="interior">
+                <div class="gal-item" onclick="openLightbox(this)">
+                    <img src="images/loznice 1.jpg" alt="Ložnice 1" loading="lazy">
+                    <div class="gal-overlay"><i class="fas fa-plus"></i></div>
+                </div>
             </div>
-            <div class="photo-item" data-cat="interior" onclick="openLb(this)">
-                <img src="images/loznice 2.jpeg" alt="Ložnice 2" loading="lazy">
-                <div class="photo-hover"><i class="fas fa-plus"></i></div>
+            <div class="gal-wrap" data-cat="interior">
+                <div class="gal-item" onclick="openLightbox(this)">
+                    <img src="images/loznice 2.jpeg" alt="Ložnice 2" loading="lazy">
+                    <div class="gal-overlay"><i class="fas fa-plus"></i></div>
+                </div>
             </div>
-            <div class="photo-item" data-cat="interior" onclick="openLb(this)">
-                <img src="images/loznice 3.jpeg" alt="Ložnice 3" loading="lazy">
-                <div class="photo-hover"><i class="fas fa-plus"></i></div>
+            <div class="gal-wrap" data-cat="interior">
+                <div class="gal-item" onclick="openLightbox(this)">
+                    <img src="images/loznice 3.jpeg" alt="Ložnice 3" loading="lazy">
+                    <div class="gal-overlay"><i class="fas fa-plus"></i></div>
+                </div>
             </div>
-            <div class="photo-item" data-cat="interior" onclick="openLb(this)">
-                <img src="images/dolni-koupelna-1.jpg" alt="Dolní koupelna" loading="lazy">
-                <div class="photo-hover"><i class="fas fa-plus"></i></div>
+            <div class="gal-wrap" data-cat="interior">
+                <div class="gal-item" onclick="openLightbox(this)">
+                    <img src="images/dolni-koupelna-1.jpg" alt="Dolní koupelna" loading="lazy">
+                    <div class="gal-overlay"><i class="fas fa-plus"></i></div>
+                </div>
             </div>
-            <div class="photo-item" data-cat="interior" onclick="openLb(this)">
-                <img src="images/horni-koupelna-1.jpg" alt="Horní koupelna" loading="lazy">
-                <div class="photo-hover"><i class="fas fa-plus"></i></div>
+            <div class="gal-wrap" data-cat="interior">
+                <div class="gal-item" onclick="openLightbox(this)">
+                    <img src="images/horni-koupelna-1.jpg" alt="Horní koupelna 1" loading="lazy">
+                    <div class="gal-overlay"><i class="fas fa-plus"></i></div>
+                </div>
             </div>
-            <div class="photo-item" data-cat="interior" onclick="openLb(this)">
-                <img src="images/horni koupelna 2.jpeg" alt="Horní koupelna 2" loading="lazy">
-                <div class="photo-hover"><i class="fas fa-plus"></i></div>
+            <div class="gal-wrap" data-cat="interior">
+                <div class="gal-item" onclick="openLightbox(this)">
+                    <img src="images/horni koupelna 2.jpeg" alt="Horní koupelna 2" loading="lazy">
+                    <div class="gal-overlay"><i class="fas fa-plus"></i></div>
+                </div>
             </div>
-            <div class="photo-item" data-cat="interior" onclick="openLb(this)">
-                <img src="images/horni koupelna 3.jpeg" alt="Horní koupelna 3" loading="lazy">
-                <div class="photo-hover"><i class="fas fa-plus"></i></div>
+            <div class="gal-wrap" data-cat="interior">
+                <div class="gal-item" onclick="openLightbox(this)">
+                    <img src="images/horni koupelna 3.jpeg" alt="Horní koupelna 3" loading="lazy">
+                    <div class="gal-overlay"><i class="fas fa-plus"></i></div>
+                </div>
             </div>
-            <div class="photo-item" data-cat="interior" onclick="openLb(this)">
-                <img src="images/horni koupelna 4.jpeg" alt="Horní koupelna 4" loading="lazy">
-                <div class="photo-hover"><i class="fas fa-plus"></i></div>
+            <div class="gal-wrap" data-cat="interior">
+                <div class="gal-item" onclick="openLightbox(this)">
+                    <img src="images/horni koupelna 4.jpeg" alt="Horní koupelna 4" loading="lazy">
+                    <div class="gal-overlay"><i class="fas fa-plus"></i></div>
+                </div>
             </div>
-            <div class="photo-item" data-cat="interior" onclick="openLb(this)">
-                <img src="images/schody.jpeg" alt="Schody" loading="lazy">
-                <div class="photo-hover"><i class="fas fa-plus"></i></div>
+            <div class="gal-wrap" data-cat="interior">
+                <div class="gal-item" onclick="openLightbox(this)">
+                    <img src="images/schody.jpeg" alt="Schody" loading="lazy">
+                    <div class="gal-overlay"><i class="fas fa-plus"></i></div>
+                </div>
             </div>
-            <div class="photo-item" data-cat="interior" onclick="openLb(this)">
-                <img src="images/ostatni 1.jpeg" alt="Ostatní" loading="lazy">
-                <div class="photo-hover"><i class="fas fa-plus"></i></div>
+            <div class="gal-wrap" data-cat="interior">
+                <div class="gal-item" onclick="openLightbox(this)">
+                    <img src="images/ostatni 1.jpeg" alt="Ostatní interiér" loading="lazy">
+                    <div class="gal-overlay"><i class="fas fa-plus"></i></div>
+                </div>
+            </div>
+            <!-- Exteriér -->
+            <div class="gal-wrap" data-cat="exterior">
+                <div class="gal-item" onclick="openLightbox(this)">
+                    <img src="images/exterier-leto.jpg" alt="Exteriér — léto" loading="lazy">
+                    <div class="gal-overlay"><i class="fas fa-plus"></i></div>
+                </div>
+            </div>
+            <div class="gal-wrap" data-cat="exterior">
+                <div class="gal-item" onclick="openLightbox(this)">
+                    <img src="images/exterier zima.jpeg" alt="Exteriér — zima" loading="lazy">
+                    <div class="gal-overlay"><i class="fas fa-plus"></i></div>
+                </div>
+            </div>
+            <div class="gal-wrap" data-cat="exterior">
+                <div class="gal-item" onclick="openLightbox(this)">
+                    <img src="images/terasa.jpeg" alt="Terasa" loading="lazy">
+                    <div class="gal-overlay"><i class="fas fa-plus"></i></div>
+                </div>
+            </div>
+            <div class="gal-wrap" data-cat="exterior">
+                <div class="gal-item" onclick="openLightbox(this)">
+                    <img src="images/vchod.jpg" alt="Vchod" loading="lazy">
+                    <div class="gal-overlay"><i class="fas fa-plus"></i></div>
+                </div>
             </div>
             <!-- Okolí -->
-            <div class="photo-item photo-wide" data-cat="surroundings" onclick="openLb(this)">
-                <img src="images/zimni priroda.jpeg" alt="Zimní příroda" loading="lazy">
-                <div class="photo-hover"><i class="fas fa-plus"></i></div>
+            <div class="gal-wrap" data-cat="surroundings">
+                <div class="gal-item" onclick="openLightbox(this)">
+                    <img src="images/zimni priroda.jpeg" alt="Zimní příroda" loading="lazy">
+                    <div class="gal-overlay"><i class="fas fa-plus"></i></div>
+                </div>
             </div>
-            <div class="photo-item" data-cat="surroundings" onclick="openLb(this)">
-                <img src="images/sjezdovka nedaleko.jpeg" alt="Sjezdovka" loading="lazy">
-                <div class="photo-hover"><i class="fas fa-plus"></i></div>
+            <div class="gal-wrap" data-cat="surroundings">
+                <div class="gal-item" onclick="openLightbox(this)">
+                    <img src="images/sjezdovka nedaleko.jpeg" alt="Sjezdovka v okolí" loading="lazy">
+                    <div class="gal-overlay"><i class="fas fa-plus"></i></div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- LIGHTBOX -->
+<!-- ===== LIGHTBOX ===== -->
 <div id="lightbox" class="lightbox">
-    <button class="lb-close" onclick="closeLb()"><i class="fas fa-xmark"></i></button>
-    <button class="lb-arrow lb-prev" onclick="lbNav(-1)"><i class="fas fa-chevron-left"></i></button>
-    <div class="lb-img-wrap">
+    <div class="lb-backdrop" onclick="closeLightbox()"></div>
+    <button class="lb-close" onclick="closeLightbox()" aria-label="Zavřít">
+        <i class="fas fa-xmark"></i>
+    </button>
+    <button class="lb-arrow lb-prev" onclick="lightboxNav(-1)" aria-label="Předchozí">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+    <div class="lb-content">
         <img id="lb-img" src="" alt="">
+        <p id="lb-caption"></p>
     </div>
-    <button class="lb-arrow lb-next" onclick="lbNav(1)"><i class="fas fa-chevron-right"></i></button>
-    <div class="lb-counter" id="lb-counter"></div>
+    <button class="lb-arrow lb-next" onclick="lightboxNav(1)" aria-label="Další">
+        <i class="fas fa-chevron-right"></i>
+    </button>
 </div>
 
-<!-- CENY -->
-<section id="ceny" class="section pricing-section">
+<!-- ===== CENY ===== -->
+<section id="pricing" class="section-pad">
     <div class="container">
-        <div class="section-head reveal">
-            <span class="eyebrow">Ceník</span>
-            <h2>Transparentní ceny<br><em>pro celou chatu</em></h2>
+        <div class="sec-header text-center reveal">
+            <div class="eyebrow">Ceník</div>
+            <h2 class="sec-heading">Ceny ubytování</h2>
+            <p class="sec-sub">Ceny jsou za celou chatu — ne za osobu</p>
         </div>
-        <div class="pricing-grid">
-            <div class="price-card reveal">
-                <div class="price-icon"><i class="fas fa-moon"></i></div>
-                <h3>Všední dny</h3>
-                <p class="price-desc">Pondělí – čtvrtek</p>
-                <div class="price-amount">1 200 <sup>Kč</sup></div>
-                <p class="price-unit">za noc</p>
-                <a href="#kontakt" class="btn-outline">Rezervovat</a>
+        <div class="row g-4 justify-content-center">
+
+            <div class="col-md-4 col-sm-10 reveal">
+                <div class="price-card">
+                    <div class="price-icon"><i class="fas fa-moon"></i></div>
+                    <h3 class="price-name">Standardní</h3>
+                    <div class="price-amount">1 200 <span>Kč / noc</span></div>
+                    <ul class="price-list">
+                        <li><i class="fas fa-check"></i> Pondělí – čtvrtek</li>
+                        <li><i class="fas fa-check"></i> Celá chata</li>
+                        <li><i class="fas fa-check"></i> Wi-Fi zdarma</li>
+                        <li><i class="fas fa-check"></i> Parkování zdarma</li>
+                    </ul>
+                    <a href="#contact" class="price-btn outline">Rezervovat</a>
+                </div>
             </div>
-            <div class="price-card price-featured reveal">
-                <div class="price-badge">Nejoblíbenější</div>
-                <div class="price-icon"><i class="fas fa-star"></i></div>
-                <h3>Víkend</h3>
-                <p class="price-desc">Pátek – neděle</p>
-                <div class="price-amount">1 500 <sup>Kč</sup></div>
-                <p class="price-unit">za noc</p>
-                <a href="#kontakt" class="btn-primary">Rezervovat</a>
+
+            <div class="col-md-4 col-sm-10 reveal reveal-d1">
+                <div class="price-card price-featured">
+                    <div class="price-badge">Nejoblíbenější</div>
+                    <div class="price-icon featured-ico"><i class="fas fa-star"></i></div>
+                    <h3 class="price-name">Víkendová</h3>
+                    <div class="price-amount">1 500 <span>Kč / noc</span></div>
+                    <ul class="price-list">
+                        <li><i class="fas fa-check"></i> Pátek – neděle</li>
+                        <li><i class="fas fa-check"></i> Celá chata</li>
+                        <li><i class="fas fa-check"></i> Wi-Fi zdarma</li>
+                        <li><i class="fas fa-check"></i> Parkování zdarma</li>
+                    </ul>
+                    <a href="#contact" class="price-btn filled">Rezervovat</a>
+                </div>
             </div>
-            <div class="price-card reveal">
-                <div class="price-icon"><i class="fas fa-calendar-week"></i></div>
-                <h3>Týden</h3>
-                <p class="price-desc">7 nocí</p>
-                <div class="price-amount">7 000 <sup>Kč</sup></div>
-                <p class="price-unit">za týden</p>
-                <a href="#kontakt" class="btn-outline">Rezervovat</a>
+
+            <div class="col-md-4 col-sm-10 reveal reveal-d2">
+                <div class="price-card">
+                    <div class="price-icon"><i class="fas fa-calendar-week"></i></div>
+                    <h3 class="price-name">Týdenní pobyt</h3>
+                    <div class="price-amount">7 000 <span>Kč / týden</span></div>
+                    <ul class="price-list">
+                        <li><i class="fas fa-check"></i> 7 nocí</li>
+                        <li><i class="fas fa-check"></i> Celá chata</li>
+                        <li><i class="fas fa-check"></i> Wi-Fi zdarma</li>
+                        <li><i class="fas fa-check"></i> Parkování zdarma</li>
+                    </ul>
+                    <a href="#contact" class="price-btn outline">Rezervovat</a>
+                </div>
             </div>
+
         </div>
     </div>
 </section>
 
-<!-- KONTAKT -->
-<section id="kontakt" class="section contact-section">
-    <div class="container-split">
-        <div class="contact-info reveal">
-            <span class="eyebrow">Kontakt</span>
-            <h2>Napište nám<br><em>kdykoli</em></h2>
-            <p>Rádi odpovíme na vaše dotazy a pomůžeme s rezervací. Odpovídáme zpravidla do 24 hodin.</p>
-            <div class="contact-details">
-                <div class="contact-row">
-                    <i class="fas fa-location-dot"></i>
-                    <div>
+<!-- ===== KONTAKT ===== -->
+<section id="contact" class="contact-wrap">
+    <div class="contact-left reveal">
+        <div class="contact-left-inner">
+            <div class="eyebrow light">Kontakt</div>
+            <h2 class="sec-heading light">Napište<br>nám</h2>
+            <p class="contact-desc">Máte zájem o rezervaci nebo dotaz? Neváhejte nás kontaktovat. Odpovíme co nejdříve.</p>
+            <div class="contact-info">
+                <div class="ci-item">
+                    <div class="ci-ico"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="ci-text">
                         <strong>Adresa</strong>
                         <span>Lipno nad Vltavou 434, 382 78</span>
                     </div>
                 </div>
-                <div class="contact-row">
-                    <i class="fas fa-envelope"></i>
-                    <div>
+                <div class="ci-item">
+                    <div class="ci-ico"><i class="fas fa-envelope"></i></div>
+                    <div class="ci-text">
                         <strong>E-mail</strong>
                         <span>info@chatalipno.cz</span>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="contact-form reveal">
-            <form id="contactForm" novalidate>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="name">Jméno *</label>
-                        <input type="text" id="name" placeholder="Vaše jméno" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">E-mail *</label>
-                        <input type="email" id="email" placeholder="vas@email.cz" required>
-                    </div>
+    </div>
+    <div class="contact-right reveal reveal-d2">
+        <form id="contactForm" class="c-form" novalidate>
+            <h3 class="c-form-title">Rezervační formulář</h3>
+            <div class="row g-3">
+                <div class="col-sm-6">
+                    <label for="name" class="form-label">Jméno *</label>
+                    <input type="text" class="form-control" id="name" placeholder="Vaše jméno" required>
                 </div>
-                <div class="form-group">
-                    <label for="dates">Termín pobytu</label>
-                    <input type="text" id="dates" placeholder="např. 20.6. – 27.6.2026">
+                <div class="col-sm-6">
+                    <label for="email" class="form-label">E-mail *</label>
+                    <input type="email" class="form-control" id="email" placeholder="Váš e-mail" required>
                 </div>
-                <div class="form-group">
-                    <label for="message">Zpráva *</label>
-                    <textarea id="message" rows="5" placeholder="Napište nám…" required></textarea>
+                <div class="col-12">
+                    <label for="dates" class="form-label">Termín pobytu</label>
+                    <input type="text" class="form-control" id="dates" placeholder="např. 15.3. – 22.3.2026">
                 </div>
-                <button type="submit" class="btn-primary btn-full" id="submitBtn">
-                    Odeslat zprávu <i class="fas fa-arrow-right"></i>
-                </button>
-            </form>
-        </div>
+                <div class="col-12">
+                    <label for="message" class="form-label">Zpráva *</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Vaše zpráva…" required></textarea>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn-primary-custom w-100 justify-content-center" id="submitBtn">
+                        <i class="fas fa-paper-plane"></i> Odeslat zprávu
+                    </button>
+                </div>
+            </div>
+        </form>
     </div>
 </section>
 
-<!-- MAPA -->
-<section id="mapa">
-    <div class="map-label">
-        <span class="eyebrow">Poloha</span>
-        <h2>Kde nás najdete</h2>
+<!-- ===== MAPA ===== -->
+<section id="map">
+    <div class="map-head section-pad text-center reveal">
+        <div class="eyebrow">Poloha</div>
+        <h2 class="sec-heading">Kde nás najdete</h2>
+        <p class="sec-sub">Lipno nad Vltavou 434, 382 78</p>
     </div>
-    <div class="map-wrap">
+    <div class="ratio ratio-21x9">
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d391.92837165870264!2d14.241190352296751!3d48.63722335064525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47737ace11781b51%3A0x278cd9644998c038!2sLipno%20nad%20Vltavou%20434%2C%20382%2078%20Lipno%20nad%20Vltavou!5e0!3m2!1scs!2scz!4v1716455696683!5m2!1scs!2scz"
-            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-            title="Poloha chaty">
+            style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" title="Poloha chaty">
         </iframe>
     </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ===== FOOTER ===== -->
 <footer class="footer">
-    <div class="footer-inner">
-        <div class="footer-logo">Chata Lipno</div>
-        <p>Lipno nad Vltavou — &copy; 2026</p>
-        <a href="#top" class="footer-top">
-            <i class="fas fa-arrow-up"></i>
-        </a>
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <i class="fas fa-house-chimney"></i>
+                <strong>Chata Lipno</strong>
+            </div>
+            <p class="footer-copy">&copy; 2026 Všechna práva vyhrazena</p>
+            <a href="#home" class="footer-top" aria-label="Zpět nahoru">
+                <i class="fas fa-arrow-up"></i>
+            </a>
+        </div>
     </div>
 </footer>
 
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-// --- Nav scroll ---
-const nav = document.getElementById('nav');
+/* ===== Navbar ===== */
+const mainNav = document.getElementById('mainNav');
 window.addEventListener('scroll', () => {
-    nav.classList.toggle('nav-solid', window.scrollY > 80);
-});
+    mainNav.classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
 
-// --- Mobile menu ---
-document.getElementById('navToggle').addEventListener('click', function() {
-    this.classList.toggle('open');
-    document.getElementById('navLinks').classList.toggle('open');
-});
-
-// Close on link click
-document.querySelectorAll('.nav-links a').forEach(a => {
-    a.addEventListener('click', () => {
-        document.getElementById('navToggle').classList.remove('open');
-        document.getElementById('navLinks').classList.remove('open');
-    });
-});
-
-// --- Smooth scroll ---
+/* ===== Smooth scroll ===== */
 document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
-        const t = document.querySelector(a.getAttribute('href'));
-        if (!t) return;
+        const target = document.querySelector(a.getAttribute('href'));
+        if (!target) return;
         e.preventDefault();
-        window.scrollTo({ top: t.offsetTop - 70, behavior: 'smooth' });
+        window.scrollTo({ top: target.offsetTop - 72, behavior: 'smooth' });
+        const nav = document.getElementById('navbarNav');
+        if (nav.classList.contains('show')) bootstrap.Collapse.getInstance(nav)?.hide();
     });
 });
 
-// --- Scroll reveal ---
-const reveals = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
-}, { threshold: 0.12 });
-reveals.forEach(r => observer.observe(r));
+/* ===== Scroll reveal ===== */
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.12, rootMargin: '0px 0px -48px 0px' });
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-// --- Gallery filter ---
+/* ===== Gallery filter ===== */
 const filterBtns = document.querySelectorAll('.filter-btn');
-const photoItems = document.querySelectorAll('.photo-item');
+const galWraps = document.querySelectorAll('.gal-wrap');
 
 filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
         filterBtns.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         const f = btn.dataset.filter;
-        photoItems.forEach(item => {
-            const show = f === 'all' || item.dataset.cat === f;
-            item.style.display = show ? '' : 'none';
+        galWraps.forEach(w => {
+            const show = f === 'all' || w.dataset.cat === f;
+            w.classList.toggle('hidden', !show);
         });
     });
 });
 
-// --- Lightbox ---
-let lbItems = [];
-let lbIndex = 0;
+/* ===== Lightbox ===== */
+let lbImages = [];
+let lbIndex  = 0;
 
-function openLb(el) {
-    const f = document.querySelector('.filter-btn.active').dataset.filter;
-    lbItems = Array.from(document.querySelectorAll(
-        f === 'all' ? '.photo-item' : `.photo-item[data-cat="${f}"]`
-    ));
-    lbIndex = lbItems.indexOf(el);
-    showLb();
-    document.getElementById('lightbox').classList.add('open');
+function getVisibleImgs() {
+    return Array.from(document.querySelectorAll('.gal-wrap:not(.hidden) .gal-item img'))
+        .map(img => ({ src: img.src, alt: img.alt }));
+}
+
+function openLightbox(el) {
+    lbImages = getVisibleImgs();
+    const imgSrc = el.querySelector('img').src;
+    lbIndex = lbImages.findIndex(i => i.src === imgSrc);
+    if (lbIndex === -1) lbIndex = 0;
+    renderLbImg();
+    document.getElementById('lightbox').classList.add('active');
     document.body.style.overflow = 'hidden';
 }
 
-function showLb() {
-    const img = lbItems[lbIndex].querySelector('img');
-    document.getElementById('lb-img').src = img.src;
-    document.getElementById('lb-img').alt = img.alt;
-    document.getElementById('lb-counter').textContent = `${lbIndex + 1} / ${lbItems.length}`;
+function renderLbImg() {
+    const img = lbImages[lbIndex];
+    if (!img) return;
+    document.getElementById('lb-img').src  = img.src;
+    document.getElementById('lb-img').alt  = img.alt;
+    document.getElementById('lb-caption').textContent = img.alt;
 }
 
-function lbNav(dir) {
-    lbIndex = (lbIndex + dir + lbItems.length) % lbItems.length;
-    showLb();
+function lightboxNav(dir) {
+    lbIndex = (lbIndex + dir + lbImages.length) % lbImages.length;
+    renderLbImg();
 }
 
-function closeLb() {
-    document.getElementById('lightbox').classList.remove('open');
+function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
     document.body.style.overflow = '';
 }
 
-document.getElementById('lightbox').addEventListener('click', e => {
-    if (e.target === e.currentTarget) closeLb();
-});
-
 document.addEventListener('keydown', e => {
-    const lb = document.getElementById('lightbox');
-    if (!lb.classList.contains('open')) return;
-    if (e.key === 'Escape') closeLb();
-    if (e.key === 'ArrowRight') lbNav(1);
-    if (e.key === 'ArrowLeft') lbNav(-1);
+    if (!document.getElementById('lightbox').classList.contains('active')) return;
+    if (e.key === 'Escape')      closeLightbox();
+    if (e.key === 'ArrowRight')  lightboxNav(1);
+    if (e.key === 'ArrowLeft')   lightboxNav(-1);
 });
 
-// --- Contact form ---
+/* ===== Contact form ===== */
 document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
-    if (!this.checkValidity()) { this.classList.add('validated'); return; }
+    if (!this.checkValidity()) { this.classList.add('was-validated'); return; }
     const btn = document.getElementById('submitBtn');
-    btn.textContent = 'Odesláno! ✓';
-    btn.style.background = '#4a7c59';
+    btn.innerHTML = '<i class="fas fa-check"></i> Zpráva odeslána!';
+    btn.classList.add('sent');
     btn.disabled = true;
     setTimeout(() => {
-        btn.innerHTML = 'Odeslat zprávu <i class="fas fa-arrow-right"></i>';
-        btn.style.background = '';
+        btn.innerHTML = '<i class="fas fa-paper-plane"></i> Odeslat zprávu';
+        btn.classList.remove('sent');
         btn.disabled = false;
         this.reset();
-        this.classList.remove('validated');
+        this.classList.remove('was-validated');
     }, 4000);
 });
 </script>
