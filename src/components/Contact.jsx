@@ -2,10 +2,12 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { MapPin, Mail, Send, Check } from 'lucide-react'
 import { img } from '../utils/img'
+import DateRangePicker from './DateRangePicker'
 
 export default function Contact() {
   const [sent, setSent] = useState(false)
-  const [form, setForm] = useState({ name: '', email: '', dates: '', message: '' })
+  const [form, setForm] = useState({ name: '', email: '', message: '' })
+  const [dates, setDates] = useState({ start: null, end: null })
 
   const set = (key) => (e) => setForm(f => ({ ...f, [key]: e.target.value }))
 
@@ -14,7 +16,8 @@ export default function Contact() {
     setSent(true)
     setTimeout(() => {
       setSent(false)
-      setForm({ name: '', email: '', dates: '', message: '' })
+      setForm({ name: '', email: '', message: '' })
+      setDates({ start: null, end: null })
     }, 4000)
   }
 
@@ -85,11 +88,12 @@ export default function Contact() {
                   value={form.email} onChange={set('email')} className={inputCls} />
               </div>
             </div>
+
             <div>
               <label className={labelCls}>Termín pobytu</label>
-              <input type="text" placeholder="např. 15.3. – 22.3.2026"
-                value={form.dates} onChange={set('dates')} className={inputCls} />
+              <DateRangePicker value={dates} onChange={setDates} />
             </div>
+
             <div>
               <label className={labelCls}>Zpráva *</label>
               <textarea required rows={4} placeholder="Vaše zpráva…"
