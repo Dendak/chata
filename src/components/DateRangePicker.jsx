@@ -67,15 +67,17 @@ export default function DateRangePicker({ value, onChange }) {
   const handleDay = (date) => {
     if (date < today) return
     if (!start || (start && end)) {
+      // fresh selection
       setStart(date); setEnd(null)
     } else {
       if (date <= start) { setStart(date); setEnd(null) }
-      else {
-        setEnd(date)
-        onChange?.({ start, end: date })
-        setOpen(false)
-      }
+      else { setEnd(date) }   // keep calendar open — wait for confirm
     }
+  }
+
+  const handleConfirm = () => {
+    onChange?.({ start, end })
+    setOpen(false)
   }
 
   const clear = (e) => {
@@ -199,14 +201,29 @@ export default function DateRangePicker({ value, onChange }) {
             })}
           </div>
 
-          {/* Footer hint */}
-          <div className="mt-3 pt-3 border-t border-stone-100 text-center text-xs text-stone-400">
-            {!start
-              ? 'Klikněte na datum příjezdu'
-              : !end
-                ? 'Nyní vyberte datum odjezdu'
-                : `${Math.round((end - start) / 86400000)} nocí · ${displayStart} – ${displayEnd}`
-            }
+          {/* Footer */}
+          <div className="mt-3 pt-3 border-t border-stone-100">
+            {!start && (
+              <p className="text-center text-xs text-stone-400">Klikněte na datum příjezdu</p>
+            )}
+            {start && !end && (
+              <p className="text-center text-xs text-stone-400">Nyní vyberte datum odjezdu</p>
+            )}
+            {start && end && (
+              <div className="flex items-center justify-between gap-3">
+                <p className="text-xs text-stone-500">
+                  <span className="font-semibold text-stone-700">{Math.round((end - start) / 86400000)} nocí</span>
+                  {' '}· {displayStart} – {displayEnd}
+                </p>
+                <button
+                  type="button"
+                  onClick={handleConfirm}
+                  className="flex-shrink-0 px-4 py-1.5 bg-accent text-white text-xs font-semibold rounded-full hover:bg-accent/80 transition-all hover:-translate-y-0.5 shadow-sm shadow-accent/30"
+                >
+                  Potvrdit ✓
+                </button>
+              </div>
+            )}
           </div>
         </div>
       )}
